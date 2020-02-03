@@ -32,7 +32,7 @@ import com.itsy.service.CustomerServiceImpl;
 public class ItsyBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ItsyBackendApplication.class, args);
+		SpringApplication.run(ItsyBackendApplication.class, args);//lol
 	}
 	
 

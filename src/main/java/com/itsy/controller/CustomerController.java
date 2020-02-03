@@ -18,10 +18,6 @@ public class CustomerController {
 	
 	@Autowired
 	private CustomerService service;
-	@GetMapping("/")
-	public String doThing(){
-		return "test";
-	}
 	@GetMapping("/customer")
 	public List<Customer> getAllCustomers(){
 		return service.getAllCustomers();
