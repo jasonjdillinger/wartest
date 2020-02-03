@@ -10,9 +10,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.itsy</groupId>
-	<artifactId>itsy-backend</artifactId>
+	<artifactId>itsy</artifactId>
 	<version>0.0.1</version>
-	<name>itsy-backend</name>
+	<name>itsy</name>
 	<description>Project 2's Backend</description>
 
 	<properties>
