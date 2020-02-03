@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 import com.itsy.model.Cart;
@@ -29,9 +30,9 @@ import com.itsy.model.Customer;
 import com.itsy.service.CustomerServiceImpl;
 
 @SpringBootApplication
-public class ItsyBackendApplication {
+public class ItsyBackendApplication extends SpringBootServletInitializer{
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		SpringApplication.run(ItsyBackendApplication.class, args);//lol
 	}
 	
