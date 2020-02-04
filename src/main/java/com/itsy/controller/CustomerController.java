@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.itsy.model.Customer;
+import com.itsy.model.Seller;
 import com.itsy.service.CustomerService;
 
 @RestController
@@ -18,6 +19,7 @@ public class CustomerController {
 	
 	@Autowired
 	private CustomerService service;
+	
 	@GetMapping("/customer")
 	public List<Customer> getAllCustomers(){
 		return service.getAllCustomers();
@@ -27,5 +29,10 @@ public class CustomerController {
 	public Customer addCustomer(@RequestBody Customer c ) {
 		return service.addCustomer(c);
 	}
-
+	
+	@PostMapping("/customer/login")
+	public Customer validate(@RequestBody Customer customer) throws Exception {
+		System.out.println("hitting customer/login");
+		return service.validate(customer);
+	}
 }

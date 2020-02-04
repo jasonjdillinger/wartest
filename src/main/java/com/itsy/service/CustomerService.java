@@ -7,6 +7,7 @@ import com.itsy.model.Customer;
 public interface CustomerService {
 	public List<Customer> getAllCustomers();
 	public Customer addCustomer(Customer c);
+	public Customer validate(Customer customer) throws Exception;
 	public Customer getCustomerById(int id);
 	public Customer updateCustomer(Customer c );
 	public void deleteCustomer(int id);

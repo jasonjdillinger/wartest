@@ -8,6 +8,6 @@ import com.itsy.model.Seller;
 @Repository
 public interface SellerDao extends JpaRepository<Seller, Integer> {
 	
-//	public Seller findByName(String name);
+	public Seller findByName(String name);
 	
 }

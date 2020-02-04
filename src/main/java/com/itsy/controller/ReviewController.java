@@ -36,8 +36,6 @@ public class ReviewController {
 	}
 	@PostMapping("/reviews/seller/")
 	public SellerReview addSellerReview(@RequestBody SellerReview review) {
-		review.setCustomer(new CustomerServiceImpl().getCustomerById(1));
-		System.out.println(review.toString());
 		return reviewService.addSellerReview(review);
 	}
 

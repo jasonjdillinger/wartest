@@ -1,5 +1,6 @@
 package com.itsy.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,21 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public List<Item> getAllItemsBySeller(Seller seller) {
 		return itemDao.findBySeller(seller);
+	}
+	
+	@Override
+	public List<Item> getAllItemsFromList(List<Integer> ids) {
+		List<Item> toReturn = new ArrayList<>();
+		List<Item> allItems = itemDao.findAll();
+		
+		for(int id : ids) {
+			for(Item item : allItems) {
+				if(item.getId() == id)
+					toReturn.add(item);
+			}
+		}
+		
+		return toReturn;
 	}
 
 	@Override

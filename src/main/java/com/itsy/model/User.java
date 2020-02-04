@@ -7,10 +7,11 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.springframework.stereotype.Indexed;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,23 +19,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 @ToString
+@AllArgsConstructor
 @Entity
 @Table
-//@Inheritance(strategy=InheritanceType.JOINED)
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public abstract class User {
-	
+@Indexed
+public class User {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
 	private String name;
 	private String password;
-	@OneToMany(fetch = FetchType.LAZY)
-	List<Conversation> conversations;
-
+//	@ManyToMany
+//	List<Conversation> conversations;	
 }

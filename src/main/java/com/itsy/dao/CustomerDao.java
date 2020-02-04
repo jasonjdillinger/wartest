@@ -7,5 +7,6 @@ import com.itsy.model.Customer;
 
 @Repository
 public interface CustomerDao extends JpaRepository<Customer, Integer>{
+	Customer findByName(String name);
 
 }

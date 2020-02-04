@@ -9,10 +9,10 @@ import com.itsy.model.Item;
 import com.itsy.model.Seller;
 
 @Repository
-public interface ItemDao extends JpaRepository<Item, Integer>{
+public interface ItemDao extends JpaRepository<Item, Integer> {
 
 	public List<Item> findBySeller(Seller seller);
 
 	public Item findByName(String name);
-	
+
 }

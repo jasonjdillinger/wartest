@@ -2,6 +2,8 @@ package com.itsy.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,7 +25,7 @@ public class ItemController {
 	@Autowired
 	private ItemService itemService;
 	
-	@GetMapping("/item")
+    @GetMapping("/item")
 	public List<Item> getAllItems() {
 		return itemService.getAllItems();
 	}
@@ -31,6 +33,11 @@ public class ItemController {
 	@GetMapping("/item/seller/{seller}")
 	public List<Item> getAllItemsBySeller(@PathVariable("seller") Seller seller) {
 		return itemService.getAllItemsBySeller(seller);
+	}
+	
+	@GetMapping("/itemsFromList")
+	public List<Item> getAllItemsFromList(@PathVariable("itemIds") List<Integer> ids) {
+		return itemService.getAllItemsFromList(ids);
 	}
 	
 	@GetMapping("/item/{id}")
@@ -44,12 +51,12 @@ public class ItemController {
 	}
 
 	@PostMapping("/item")
-	public Item addItem(@RequestBody Item item) {
+	public Item addItem(@Valid @RequestBody Item item) {
 		return itemService.addItem(item);
 	}
 
 	@PutMapping("/item")
-	public Item updateItem(@RequestBody Item item) {
+	public Item updateItem(@Valid @RequestBody Item item) {
 		return itemService.updateItem(item);
 	}
 

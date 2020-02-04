@@ -10,6 +10,8 @@ public interface ItemService {
 	public List<Item> getAllItems();
 	
 	public List<Item> getAllItemsBySeller(Seller seller);
+
+	public List<Item> getAllItemsFromList(List<Integer> ids);
 	
 	public Item getItemById(int id);
 
