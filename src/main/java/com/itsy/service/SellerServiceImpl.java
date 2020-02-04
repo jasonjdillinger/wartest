@@ -20,10 +20,10 @@ public class SellerServiceImpl implements SellerService {
 		return sellerDao.findAll();
 	}
 
-//	@Override
-//	public Seller getSellerByName(String name) {
-//		return sellerDao.findByName(name);
-//	}
+	@Override
+	public Seller getSellerByName(String name) {
+		return sellerDao.findByName(name);
+	}
 	
 	@Override
 	public Seller validate(Seller seller) throws Exception {

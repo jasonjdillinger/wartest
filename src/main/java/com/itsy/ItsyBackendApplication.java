@@ -22,13 +22,12 @@ import com.itsy.model.Status;
 import com.itsy.service.ItemServiceImpl;
 import com.itsy.service.SellerServiceImpl;
 import com.itsy.service.StatusService;
-import com.itsy.model.Customer;
 import com.itsy.service.CartServiceImpl;
 import com.itsy.service.ConversationServiceImpl;
 import com.itsy.service.CustomerServiceImpl;
 
 @SpringBootApplication
-public class ItsyBackendApplication  extends SpringBootServletInitializer{
+public class ItsyBackendApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ItsyBackendApplication.class, args);
@@ -44,7 +43,8 @@ public class ItsyBackendApplication  extends SpringBootServletInitializer{
 			int id = 1;
 
 			seller = new Seller();
-			seller.setName(id++ + "_namio");
+//			seller.setName(id++ + "_namio");
+			seller.setName("annievo");
 			seller.setPassword("password");
 			sellerService.addSeller(seller);
 			seller = new Seller();
@@ -75,17 +75,10 @@ public class ItsyBackendApplication  extends SpringBootServletInitializer{
 			customer.setName(cid++ + "customer");
 			customer.setPassword("password");
 			customerService.addCustomer(customer);
-			customer = new Customer();
-			customer.setCarts(new ArrayList<Cart>());
-			customer.setConversations(new ArrayList<Conversation>());
-			customer.setName(cid++ + "customer");
-			customer.setPassword("password");
-			customerService.addCustomer(customer);
 
 			System.out.println("Generating the Item info..");
 			seller = sellerService.getAllSellers().get(0);
 			Item item;
-			id = 6;
 
 			item = new Item();
 			item.setDetails("Details of item: " + (id));
@@ -99,12 +92,8 @@ public class ItsyBackendApplication  extends SpringBootServletInitializer{
 			item.setPrice(id++);
 			item.setSeller(seller);
 			itemService.addItem(item);
-			item = new Item();
-			item.setDetails("Details of item: " + (id));
-			item.setName("Name" + (id));
-			item.setPrice(id++);
-			item.setSeller(seller);
-			itemService.addItem(item);
+			
+			seller = sellerService.getAllSellers().get(1);
 			item = new Item();
 			item.setDetails("Details of item: " + (id));
 			item.setName("Name" + (id));
@@ -130,8 +119,6 @@ public class ItsyBackendApplication  extends SpringBootServletInitializer{
 			carts.add(cart);
 			cartService.addCart(cart);
 			System.out.println("Generating the Customer info...");
-			//Customer customer;
-			//int cid = 1;
 			customer = new Customer();
 			customer.setCarts(carts);
 			customer.setConversations(new ArrayList<Conversation>());

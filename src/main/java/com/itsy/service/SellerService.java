@@ -8,7 +8,7 @@ public interface SellerService {
 	
 	public List<Seller> getAllSellers();
 	
-//	public Seller getSellerByName(String name);
+	public Seller getSellerByName(String name);
 	
 	public Seller validate(Seller seller) throws Exception;
 	

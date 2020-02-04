@@ -43,6 +43,11 @@ public class SellerController {
 	public Seller getSellerById(@PathVariable("id") int id) {
 		return sellerService.getSellerById(id);
 	}
+	
+	@GetMapping("/seller/{name}")
+	public Seller getSellerByName(@PathVariable("name") String name) {
+		return sellerService.getSellerByName(name);
+	}
 
 	@PostMapping("/seller")
 	public Seller addSeller(@RequestBody Seller seller) {
