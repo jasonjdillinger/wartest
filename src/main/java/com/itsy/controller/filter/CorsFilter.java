@@ -50,7 +50,7 @@ public class CorsFilter implements Filter {
 			}
 		} else {
 			System.out.println("CORS Pre-flight");
-			res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+			res.setHeader("Access-Control-Allow-Origin", "http://itsyfrontend.s3-website.us-east-2.amazonaws.com");
 			res.setHeader("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT");
 			res.setHeader("Access-Control-Max-Age", "3600");
 			res.setHeader("Content-Type", "application/json");

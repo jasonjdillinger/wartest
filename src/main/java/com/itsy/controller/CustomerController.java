@@ -14,7 +14,7 @@ import com.itsy.model.Seller;
 import com.itsy.service.CustomerService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://itsyfrontend.s3-website.us-east-2.amazonaws.com")
 public class CustomerController {
 	
 	@Autowired

@@ -27,7 +27,7 @@ import com.itsy.service.ConversationServiceImpl;
 import com.itsy.service.CustomerServiceImpl;
 
 @SpringBootApplication
-public class ItsyBackendApplication extends SpringBootServletInitializer {
+public class ItsyBackendApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
 		SpringApplication.run(ItsyBackendApplication.class, args);

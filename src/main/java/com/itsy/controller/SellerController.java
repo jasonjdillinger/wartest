@@ -16,7 +16,7 @@ import com.itsy.service.CartService;
 import com.itsy.service.SellerService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://itsyfrontend.s3-website.us-east-2.amazonaws.com")
 public class SellerController {
 
 	@Autowired

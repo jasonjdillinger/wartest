@@ -18,7 +18,7 @@ import com.itsy.model.User;
 import com.itsy.service.ConversationService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://itsyfrontend.s3-website.us-east-2.amazonaws.com")
 public class MessageController {
 	@Autowired
 	private ConversationService conversationService;

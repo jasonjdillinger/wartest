@@ -19,7 +19,7 @@ import com.itsy.service.CustomerServiceImpl;
 import com.itsy.service.ReviewService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://itsyfrontend.s3-website.us-east-2.amazonaws.com")
 public class ReviewController {
 
 	@Autowired
